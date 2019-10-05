@@ -1576,10 +1576,11 @@ input, select, textarea {
 			margin: 0 0 2em 0;
 		}
 
-			.image.centered img {
-				margin: 0 auto;
-				width: auto;
-			}
+		.image.centered img {
+			margin: 0 auto;
+			width: auto;
+		}
+
 
 /* Button */
 
@@ -1849,6 +1850,9 @@ input, select, textarea {
 
 			#nav a:hover {
 				opacity: 1.0;
+				/* background: rgba(255,255,255,0.05);
+				transform: scale(1.2);
+    			color: #fff; */
 			}
 
 				#nav a:hover span {
@@ -2029,6 +2033,8 @@ input, select, textarea {
 						left: 0;
 						width: 100%;
 						height: 100%;
+						filter: saturate(90%);
+						-webkit-filter: saturate(90%);
 						-moz-object-fit: cover;
 						-webkit-object-fit: cover;
 						-ms-object-fit: cover;
@@ -2037,6 +2043,14 @@ input, select, textarea {
 						-webkit-object-position: center;
 						-ms-object-position: center;
 						object-position: center;
+						-moz-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+						-webkit-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+						-ms-transition: width .15s ease-in-out, padding-right .15s ease-in-out;
+						transition: transform .15s ease-in-out;
+					}
+
+					#main > .panel.panel.intro .pic img {
+						transition: opacity 0.2s ease-in-out;
 					}
 
 					#main > .panel.intro .pic .arrow {
@@ -2076,6 +2090,15 @@ input, select, textarea {
 						padding-right: 0.25em;
 					}
 
+					#main > .panel.intro .pic:hover #dp{
+						-moz-transform: scale(1.01);
+						-webkit-transform: scale(1.01);
+						-ms-transform: scale(1.01);
+						-webkit-filter: saturate(90%);
+						transform: scale(1.01);
+						filter: saturate(120%);
+					}
+
 				#main > .panel.intro header {
 					-moz-flex-grow: 1;
 					-webkit-flex-grow: 1;
@@ -2097,7 +2120,8 @@ input, select, textarea {
 
 					#main > .panel.intro header p {
 						letter-spacing: -0.015em;
-						font-size: 1.25em;
+						font-size: 1.5em;
+						color: #000;
 						margin: 0.25em 0 0 0;
 					}
 
